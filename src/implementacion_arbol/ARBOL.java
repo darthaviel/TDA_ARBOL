@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package implementacion_arbol;
 
@@ -12,4 +8,32 @@ package implementacion_arbol;
  */
 public class ARBOL {
 
+    public int PADRE(){
+        return 0;
+    }
+    
+    public int HIJO_MAS_IZQ(){
+        return 0;
+    }
+    
+    public int HERMANO_DER(){
+        return 0;
+    }
+    
+    public Object ETIQUETA(){
+        return null;
+    }
+    
+    public void CREA(Object etiqueta,Object... hijos){
+        
+    }
+    
+    public int RAIZ(){
+        return 0;
+    }
+    
+    public void ANULA(){
+        
+    }
+    
 }

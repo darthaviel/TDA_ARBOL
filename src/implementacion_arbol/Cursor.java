@@ -8,6 +8,8 @@ package implementacion_arbol;
  */
 class Cursor {
     
+    int raiz;
+    
     Nodo[] nodos_arbol = new Nodo[1000];
     
     boolean [] memoria = new boolean[1000];

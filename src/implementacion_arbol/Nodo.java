@@ -1,5 +1,3 @@
-
-
 package implementacion_arbol;
 
 /**
@@ -7,9 +5,10 @@ package implementacion_arbol;
  * @author l
  */
 public class Nodo {
-    int hijo_mas_izquierdo;
-    int hermano_derecho;
-    Object dato;
+
+    private int hijo_mas_izquierdo;
+    private int hermano_derecho;
+    private Object dato;
 
     public int getHijo_mas_izquierdo() {
         return hijo_mas_izquierdo;
@@ -40,8 +39,10 @@ public class Nodo {
         this.hermano_derecho = hermano_derecho;
         this.dato = dato;
     }
-   
-    
-    
-    
+
+    public Nodo() {
+        this.hermano_derecho = -1;
+        this.hijo_mas_izquierdo = -1;
+    }
+
 }

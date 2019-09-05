@@ -8,16 +8,20 @@ public class ARBOL {
 
     Cursor cursor_arbol = new Cursor();
 
-    public int PADRE(int n) {
+    public int PADRE(int... n) {
         int control = RAIZ();
-        if (n < 0) {
+        try {
+            control = n[1];
+        } catch (Exception e) {
+        }
+        if (n[0] < 0) {
             return -2;
         } else {
-            if (cursor_arbol.exist(n)) {
-                if (control == n) {
+            if (cursor_arbol.exist(n[0])) {
+                if (control == n[0]) {
                     return -1;
                 } else {
-                    while (HERMANO_DER(n) >= 0) {
+                    while (HERMANO_DER(n[0]) >= 0) {
 
                     }
                     return -1; //a retornar padre, retorno actual provicional

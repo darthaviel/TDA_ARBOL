@@ -27,6 +27,7 @@ class Cursor {
             for (int i = 0; i < memoria.length; i++) {
                 if (!memoria[i]) {
                     a = i;
+                    memoria[i] = true;
                     break;
                 }
             }
@@ -53,6 +54,18 @@ class Cursor {
         this.raiz = raiz;
     }
 
+    public void setEtiqueta(int nodo, Object etiqueta) {
+        nodos_arbol[nodo].setDato(etiqueta);
+    }
+    
+    public void setHijoMasIzq(int nodo, int hijomasizq){
+        nodos_arbol[nodo].setHijo_mas_izquierdo(hijomasizq);
+    }
+    
+    public void setHermanoDer(int nodo, int hermanoder){
+        nodos_arbol[nodo].setHermano_derecho(hermanoder);
+    }
+
     void anularMemoria() {
         if (memoria.length > 1000) {
             memoria = Arrays.copyOf(memoria, 1000);
@@ -64,6 +77,9 @@ class Cursor {
     }
 
     public boolean exist(int n) {
+        if (n < 0) {
+            return false;
+        }
         if (n < memoria.length) {
             if (memoria[n]) {
                 return true;
@@ -75,7 +91,7 @@ class Cursor {
         }
     }
 
-    Object getEtiquet(int n) {
+    Object getEtiqueta(int n) {
         return nodos_arbol[n].getDato();
     }
 

@@ -41,6 +41,7 @@ public class Nodo {
     }
 
     public Nodo() {
+        this.dato = null;
         this.hermano_derecho = -1;
         this.hijo_mas_izquierdo = -1;
     }

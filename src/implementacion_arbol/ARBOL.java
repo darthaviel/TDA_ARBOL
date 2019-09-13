@@ -89,8 +89,10 @@ public class ARBOL {
         return nodo;
     }
 
-    public boolean CREA(Object etiqueta) {
-        return true;
+    public int CREA(Object etiqueta) {
+        int nodo = cursor_arbol.campoLibre();
+        cursor_arbol.setEtiqueta(nodo, etiqueta);
+        return nodo;
     }
 
     public int RAIZ() {

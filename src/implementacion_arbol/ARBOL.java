@@ -14,7 +14,7 @@ public class ARBOL {
         PILA pila = new PILA();
         boolean regresa = false;
         if (cursor_arbol.exist(n)) {
-            pila.METE(n);
+            pila.METE(RAIZ());
             while (!pila.VACIA()) {
                 if (((Integer) pila.TOPE()) == n) {
                     pila.SACA();
@@ -30,7 +30,6 @@ public class ARBOL {
                         pila.METE(a);
                         regresa = false;
                     } else {
-                        pila.SACA();
                         pila.SACA();
                         regresa = true;
                     }

@@ -84,6 +84,8 @@ public class ARBOL {
         for (int i = 1; i < hijos.length; i++) {
             cursor_arbol.setHermanoDer(hijos[i - 1], hijos[i]);
         }
+        
+        cursor_arbol.setRaiz(nodo);
 
         return nodo;
     }
@@ -91,6 +93,9 @@ public class ARBOL {
     public int CREA(Object etiqueta) {
         int nodo = cursor_arbol.campoLibre();
         cursor_arbol.setEtiqueta(nodo, etiqueta);
+        
+        cursor_arbol.setRaiz(nodo);
+        
         return nodo;
     }
 
